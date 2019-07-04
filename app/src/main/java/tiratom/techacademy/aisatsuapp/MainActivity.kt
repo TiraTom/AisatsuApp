@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Log.d("UI_PARTS", pickedTime)
 
                 // 設定した時刻に応じて挨拶の内容を変える
+                // MEMO: hourで比較すればよい。もしxx:yyなど分が条件に関わってくる場合は、分単位に直して比較する方法もある                                  
                 when(pickedTime.toInt()){
                     in 0..159 -> textView1.text = "こんばんは"
                     in 200..959 -> textView1.text = "おはよう"
